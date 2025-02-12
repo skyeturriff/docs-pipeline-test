@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    options {
+        skipDefaultCheckout()
+    }
 
     parameters {
       string(name: 'COMMIT_HASH', defaultValue: '')
